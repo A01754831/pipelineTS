@@ -37,7 +37,7 @@ class Server{
     }
 
     private async connectDB(){
-        await db.sequelize.sync({force:true});
+        await db.sequelize.sync({force:false});
     }
 
     public init(){

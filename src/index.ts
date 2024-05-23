@@ -2,6 +2,8 @@ import Server from './provider/Server';
 import {PORT,NODE_ENV} from './config';
 import express from 'express';
 import cors from 'cors';
+import ClienteController from './controllers/ClienteController';
+import MascotasController from './controllers/MascotaController';
 
 
 const server = new Server({
@@ -13,8 +15,8 @@ const server = new Server({
         cors()
     ],
     controllers:[
-        // AgenteController.instance,
-        // AuthenticationController.instance
+        ClienteController.instance,
+        MascotasController.instance
     ]
 });
 
